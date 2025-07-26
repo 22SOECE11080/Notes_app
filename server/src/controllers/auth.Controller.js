@@ -21,9 +21,8 @@ const authController = {
         email,
         password: hashedPassword,
       });
-
      
-      return createResponse(res, true, 201, "User registered successfully", {
+      return createResponse(res, true, 201, "USER_SUCCESSFULLY_REGISTER", {
         user: {
           id: newUser.id,
           username: newUser.username,
@@ -49,7 +48,7 @@ const authController = {
       res.status(500).json({ msg: "Server error" });
     }
   },
-
+  
   profile: async (req, res) => {
     try {
       const user = req.user; // From authMiddleware

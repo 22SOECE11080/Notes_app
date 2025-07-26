@@ -12,7 +12,7 @@ const createResponse = (res, success, statusCode, message, data = {}) => {
         success,
         statusCode,
         message,
-        data,
+        payload: data,
     });
 };
 

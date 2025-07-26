@@ -33,7 +33,7 @@ sequelize
 
     // Sync models
     // return sequelize.sync(); // { force: true } to reset tables
-    sequelize.sync({ alter: true }).then(() => {
+    sequelize.sync({ alter: false }).then(() => {
       console.log("Database synced");
     });
   })
