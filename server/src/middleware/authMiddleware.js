@@ -16,8 +16,7 @@ const authMiddleware = async (req, res, next) => {
     if (!user) {
       return res.status(401).json({ msg: "Invalid user" });
     }
-
-    req.user = user; // attaching user to request
+    req.user = user; 
     next();
   } catch (error) {
     return res.status(401).json({ msg: "Invalid or expired token" });
