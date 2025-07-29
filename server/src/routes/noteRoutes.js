@@ -18,7 +18,7 @@ router.post("/createNote",authMiddleware,notecontroller.postNote);
 //  */
 
 
-router.get("/getAllNotes",authMiddleware,notecontroller.getAllnotes);
+router.get("/getAllNotes",notecontroller.getAllnotes);
 
 // /**
 //  * @route GET - /api/notes/getNote/:id
